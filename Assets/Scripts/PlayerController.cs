@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
         }
         else if(Input.GetMouseButtonUp(0) && playerRigidbody.velocity.y > 0)
         {
-            playerRigidbody.velocity = playerRigidbody.velocity * 0.5f;
+            playerRigidbody.velocity = playerRigidbody.velocity * 0.4f;
         }
         animator.SetBool("Grounded", isGrounded);
     }

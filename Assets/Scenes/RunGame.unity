@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGameover: 0
-  ScoreText: {fileID: 1587466426}
+  scoreText: {fileID: 1587466426}
   gameoverUI: {fileID: 342979290}
 --- !u!4 &37979079
 Transform:
@@ -160,7 +160,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37979077}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 701.49677, y: 298.9091, z: -1066}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -643,7 +643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fff9d756c509f745be15916456f9e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathClip: {fileID: 0}
+  deathClip: {fileID: 8300000, guid: 12fd58cee55a89f4a92dce7f1c0b5c4a, type: 3}
   jumpForce: 700
 --- !u!1 &456222690
 GameObject:
@@ -1369,6 +1369,56 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20.48, y: 10.24}
   m_EdgeRadius: 0
+--- !u!1 &2143462163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2143462165}
+  - component: {fileID: 2143462164}
+  m_Layer: 0
+  m_Name: Platform Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2143462164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143462163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5394fffed92ac0f40acd11713dbc4c68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformPrefab: {fileID: 3959523809450568115, guid: cdb93859477e1b7499865fcbf221049e,
+    type: 3}
+  count: 3
+  timeBetSpawnMin: 1.25
+  timeBetSpawnMax: 2.25
+  yMin: -3.5
+  yMax: 1.5
+--- !u!4 &2143462165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143462163}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2145931122
 GameObject:
   m_ObjectHideFlags: 0
