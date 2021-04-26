@@ -7,10 +7,11 @@ public class Platform : MonoBehaviour
     public GameObject[] obstacles;
     private bool stepped = false;
 
+    // Activate : false -> true 
     private void OnEnable()
     {
         stepped = false;
-        for(int i = 0; i < obstacles.Length; i++)
+        for (int i = 0; i < obstacles.Length; i++)
         {
             if (Random.Range(0, 3) == 0)
             {
@@ -22,12 +23,10 @@ public class Platform : MonoBehaviour
             }
         }
     }
-    void OnColiisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("1");
-        if(collision.collider.tag == "Player" && !stepped)
+        if (collision.collider.tag == "Player" && !stepped)
         {
-            Debug.Log("2");
             stepped = true;
             GameManager.instance.AddScore(1);
         }
